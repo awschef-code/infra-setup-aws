@@ -6,6 +6,12 @@ For other reasons I created Docker image from Apline, we could use the image pro
 
 Change the Entrypoint in docker-compose.yml to apply terraform 
 
+### Add AWS credentails to Environment file
+
+`cp aws.env.example aws.env`
+
+Add your real AWS Keys 
+
 ### Format your Terraform Code
 
 `./manage.sh fmt`
