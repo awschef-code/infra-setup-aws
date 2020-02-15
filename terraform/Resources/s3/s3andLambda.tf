@@ -1,8 +1,8 @@
 # Set AWS Credentials
 provider "aws" {
   region     = "eu-west-1"
-  access_key = "changed"
-  secret_key = "changed"
+  access_key = "acc"
+  secret_key = "sec"
 }
 
 variable "S3BucketName" {
