@@ -1,0 +1,8 @@
+.gitignore
+.vscode
+aws.env
+aws.env.example
+docker-compose.yml
+manage.sh
+README.md
+terraform/.terraform

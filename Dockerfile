@@ -7,10 +7,13 @@ WORKDIR $GOPATH/src/github.com/hashicorp/terraform
 RUN git clone https://github.com/hashicorp/terraform.git ./ && \
     git checkout v${TERRAFORM_VERSION} && \
     /bin/bash scripts/build.sh
-WORKDIR $GOPATH
+WORKDIR /terraform
+COPY terraform /terraform
+RUN /go/bin/terraform init
 
 FROM alpine
 RUN apk add --no-cache  git
 COPY --from=builder /go/bin/terraform  /bin/terraform
+COPY --from=builder /terraform/.terraform/plugins/linux_amd64/terraform-provider-*  /plugins/
 WORKDIR /terraform
-ENTRYPOINT ["/bin/terraform"]
+CMD ["/bin/terraform "]

@@ -2,8 +2,13 @@ version: "3.7"
 services:
   terraform_libs:
     image: ranjithka/terraform:0.12.17
-    build: ./terraform_libs
-    entrypoint: /bin/terraform init
+    build: .
+    command:
+      - /bin/sh
+      - -c
+      - |
+        /bin/terraform init -plugin-dir=/plugins
+        /bin/terraform plan
     env_file:
       - aws.env
     volumes:

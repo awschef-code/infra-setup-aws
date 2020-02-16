@@ -14,6 +14,8 @@ Add your real AWS Keys
 
 ### Format your Terraform Code
 
+`docker pull ranjithka/terraform:0.12.17`
+
 `./manage.sh fmt`
 
 `./manage.sh init`
@@ -24,3 +26,9 @@ Add your real AWS Keys
 ### Key Pair module
 
 Writing Private key in State file is not recomended. Insert the Public key and create key pair in AWS. 
+
+### Docker-compose 
+
+Created docker compose for CI/CD purpose. To execute
+
+`docker-compose up`  - This will initialize and complete the plan 
