@@ -1,0 +1,15 @@
+.terraform/
+terraform.tfvars
+terraform.tfstate
+terraform.tfstate.backup
+secrets.yml
+*secrets.yml
+*.png
+*.svg
+.idea
+.DS_Store
+.vault_password
+*.zip
+node_modules/
+test_output.json
+aws.env

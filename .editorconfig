@@ -1,0 +1,25 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_size = 4
+max_line_length = 80
+
+[*.{tf,yml,groovy}]
+indent_size = 2
+
+[*.md]
+max_line_length = 0
+trim_trailing_whitespace = false
+
+[*.sh]
+indent_style = space
+indent_size = 4
+
+[*.go]
+indent_style = tab
+indent_size = 8
